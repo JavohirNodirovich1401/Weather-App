@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather App — Javo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <span class="logo">☀️</span>
+      <h1>Weather App</h1>
+    </div>
+
+    <div class="controls">
+      <button id="themeToggle" class="btn" aria-label="Tema almashtirish">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="search">
+      <form id="searchForm" autocomplete="off">
+        <input
+          id="cityInput"
+          type="text"
+          placeholder="Shahar nomi (masalan, Tashkent)"
+          aria-label="Shahar nomini kiriting"
+          required
+        />
+        <button type="submit" class="btn primary">Qidirish</button>
+        <button type="button" id="useGeo" class="btn">📍 Geolokatsiya</button>
+      </form>
+      <p class="hint">Maslahat: tez-tez ishlatiladigan shaharlarni saqlash uchun yulduzni bosing.</p>
+    </section>
+
+    <section id="statusBar" class="status" role="status" aria-live="polite"></section>
+
+    <section id="weatherCard" class="card hidden" aria-hidden="true">
+      <div class="card-header">
+        <div>
+          <h2 id="cityName">—</h2>
+          <p id="updatedAt" class="muted">Yangilandi: —</p>
+        </div>
+        <button id="saveCity" class="icon-btn" title="Sevimli shahar">☆</button>
+      </div>
+
+      <div class="card-body">
+        <div class="temp-block">
+          <div id="mainIcon" class="icon">⛅</div>
+          <div>
+            <p class="temp">
+              <span id="temp">—</span><span class="unit">°C</span>
+            </p>
+            <p id="description" class="desc">—</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="grid-item">
+            <span class="label">His etiladi</span>
+            <span id="feelsLike">— °C</span>
+          </div>
+          <div class="grid-item">
+            <span class="label">Namlik</span>
+            <span id="humidity">— %</span>
+          </div>
+          <div class="grid-item">
+            <span class="label">Shamol</span>
+            <span id="wind">— m/s</span>
+          </div>
+          <div class="grid-item">
+            <span class="label">Bosim</span>
+            <span id="pressure">— hPa</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="favoritesSection" class="favorites">
+      <h3>Sevimli shaharlar</h3>
+      <div id="favoritesList" class="chips"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="muted">
+      Ma’lumotlar: OpenWeatherMap | UI: minimal | Offline: cache/fallback
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
