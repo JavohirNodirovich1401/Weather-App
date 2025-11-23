@@ -16,6 +16,6 @@ Ob-havo ilovasi: API orqali ma'lumot olish, caching va graceful fallback bilan i
 - 📱 Mobilga moslashgan interfeys
 
 ## Screenshot
-![Preview]()
+![Preview](https://github.com/JavohirNodirovich1401/Weather-App/blob/main/Screenshot%202025-11-22%20215636.png)
 
 ## Fayl struktura
